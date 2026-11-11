@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="glowTR" cx="85%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBL" cx="0%" cy="100%" r="70%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#ffffff" fill-opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0b0d12"/>
+  <rect width="1200" height="630" fill="url(#glowTR)"/>
+  <rect width="1200" height="630" fill="url(#glowBL)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <rect x="80" y="205" width="120" height="6" rx="3" fill="#6366f1"/>
+
+  <text x="80" y="300" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="74" font-weight="700" fill="#ffffff" letter-spacing="-2">Sony Taufan Hambali</text>
+  <text x="80" y="368" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="34" font-weight="600" fill="#818cf8">IT Business Analyst &amp; ERP Functional Support</text>
+  <text x="80" y="432" font-family="'Inter','Segoe UI',Arial,sans-serif" font-size="22" fill="#9aa3b5">PT Modernland Realty Tbk  ·  Bekasi, Indonesia  ·  ERP · BRD · UAT · Go-Live</text>
+
+  <text x="80" y="560" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="24" font-weight="600" fill="#6366f1">sonytaufanh.github.io/portofolio</text>
+</svg>
