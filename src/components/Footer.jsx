@@ -1,3 +1,4 @@
+import { ArrowUp } from 'lucide-react'
 import { profile } from '../data/portfolio'
 
 export default function Footer() {
@@ -5,12 +6,11 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-inner">
-        <span>
-          © {year} {profile.name}. Seluruh hak cipta dilindungi.
-        </span>
-        <span>
-          Dibangun dengan <a href="https://react.dev" target="_blank" rel="noopener noreferrer">React</a> &amp; Vite
-        </span>
+        <span>© {year} {profile.name}. Hak cipta dilindungi.</span>
+        <span className="mono">React · Vite · Console UI</span>
+        <button className="to-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <ArrowUp size={14} /> Ke atas
+        </button>
       </div>
     </footer>
   )

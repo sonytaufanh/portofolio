@@ -1,6 +1,19 @@
-# Portofolio Yansen
+# Portofolio — Sony Taufan Hambali
 
-Website portofolio satu halaman berbasis **React + Vite** dengan tema gelap/terang, responsif, dan animasi halus.
+Website portofolio satu halaman berbasis **React + Vite** dengan konsep **"IT Operations Console"**: tema gelap/terang, interaktif, dan responsif.
+
+## Interaksi utama
+
+| Fitur | Cara pakai |
+| --- | --- |
+| Command palette | `Ctrl` / `⌘` + `K`, atau tombol "Cari" di navbar |
+| Detail proyek | Klik kartu proyek (modal studi kasus) |
+| Kategori keahlian | Tab di bagian Keahlian |
+| Alur kerja | Klik tahap di stepper BRD → Go-Live |
+| Riwayat peran | Tab pengalaman kerja |
+| Sertifikasi | Accordion (buka/tutup) |
+| Salin cepat | Tombol salin pada `profile.json` dan email kontak |
+| Tema | Tombol matahari/bulan di navbar (tersimpan otomatis) |
 
 ## Menjalankan
 
@@ -13,42 +26,40 @@ npm run preview  # pratinjau hasil build
 
 ## Mengubah isi (penting!)
 
-**Semua konten ada di satu file: `src/data/portfolio.js`**
+**Semua konten ada di satu file: `src/data/portfolio.js`** — nama, peran, kontak, sosial, bio, statistik, keahlian, proses kerja, proyek (termasuk detail modal), pengalaman, pendidikan, dan sertifikasi.
 
-Edit file tersebut untuk mengubah:
+Foto profil: taruh file di `public/` lalu isi `photo: '/nama-file.jpg'` (kosong = monogram "ST").
+Screenshot proyek: isi `image` pada objek proyek.
 
-- Nama, peran, tagline, email, telepon, lokasi
-- Link GitHub / LinkedIn / Instagram
-- Bio & statistik di bagian Tentang
-- Daftar keahlian
-- Daftar proyek (tambah/hapus/ubah)
-- Pengalaman kerja & pendidikan
+## Warna & tipografi
 
-Tidak perlu menyentuh komponen React.
-
-## Ganti warna aksen
-
-Buka `src/index.css`, cari variabel `--accent` dan `--accent-strong` di blok `:root` (mode gelap) dan `[data-theme='light']` (mode terang).
+Variabel tema ada di `src/index.css` (`--accent`, `--accent-2`, `--grad`, dsb.) untuk mode gelap dan terang. Font: Space Grotesk (judul), Inter (isi), JetBrains Mono (label).
 
 ## Struktur
 
 ```
 src/
-├── data/portfolio.js    ← ISI KONTEN (edit di sini)
-├── components/          ← Navbar, Hero, About, Skills, Projects, Experience, Contact, Footer
-├── hooks/useReveal.js   ← animasi fade-up saat scroll
-├── App.jsx              ← tema (dark/light) + susunan section
-├── index.css            ← design system + variabel tema
-└── main.jsx             ← entry point
+├── data/portfolio.js        ← ISI KONTEN (edit di sini)
+├── components/
+│   ├── Navbar, Hero, About, Skills, Process,
+│   │   Projects (+ProjectModal), Experience, Contact, Footer
+│   ├── CommandPalette       ← Ctrl/Cmd + K
+│   ├── ScrollProgress       ← progress bar scroll
+│   └── Section, SocialLinks
+├── hooks/
+│   ├── useReveal.js         ← animasi masuk saat scroll
+│   └── useTypewriter.js     ← teks peran berganti otomatis
+├── App.jsx                  ← tema, palette, susunan section
+└── index.css                ← design system + responsif
 ```
 
+## Formulir kontak
+
+Menggunakan **FormSubmit** (`https://formsubmit.co/ajax/<email>`) — tanpa backend. Pengiriman pertama memerlukan konfirmasi sekali lewat email.
+
 ## Deploy
 
-Hasil `npm run build` di folder `dist/` bisa di-host di Vercel, Netlify, GitHub Pages, atau hosting statis lainnya.
+Situs live: **https://sonytaufanh.github.io/portofolio/**
 
-
-## Deploy
-
-Situs live: https://sonytaufanh.github.io/portofolio/
-
-Deploy otomatis via GitHub Actions (.github/workflows/deploy.yml) setiap push ke branch main. Repo: https://github.com/sonytaufanh/portofolio
+Deploy otomatis via GitHub Actions (`.github/workflows/deploy.yml`) setiap push ke `main`.
+Repo: https://github.com/sonytaufanh/portofolio — atau hosting statis lain menggunakan folder `dist/`.

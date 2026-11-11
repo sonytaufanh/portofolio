@@ -1,9 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-/**
- * Menambahkan class "visible" pada elemen ber-class "reveal"
- * saat elemen masuk viewport (animasi fade-up saat scroll).
- */
+/** Fade-up reveal saat elemen masuk viewport. */
 export default function useReveal() {
   const ref = useRef(null)
 
@@ -26,7 +23,7 @@ export default function useReveal() {
           }
         })
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     )
 
     targets.forEach((el) => observer.observe(el))
