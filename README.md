@@ -45,3 +45,10 @@ src/
 ## Deploy
 
 Hasil `npm run build` di folder `dist/` bisa di-host di Vercel, Netlify, GitHub Pages, atau hosting statis lainnya.
+
+
+## Deploy
+
+Situs live: https://sonytaufanh.github.io/portofolio/
+
+Deploy otomatis via GitHub Actions (.github/workflows/deploy.yml) setiap push ke branch main. Repo: https://github.com/sonytaufanh/portofolio
